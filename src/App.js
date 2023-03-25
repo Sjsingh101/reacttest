@@ -8,7 +8,7 @@ function App() {
     let response;
     if(name === "wlkn"){
       response = await axios.get('/en/product-inventory/?id=92815999');
-      setData(response.data.productInventory.variantId);
+      setData(response?.data?.productInventory?.variantId);
     }
     else{
       response = await axios.get('/rest/v2/tousSite-pr%7Cen_PR/products/012346000/stock?location=60061&fields=FULL', {
